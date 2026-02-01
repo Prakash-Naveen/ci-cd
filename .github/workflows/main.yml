@@ -25,10 +25,10 @@ jobs:
       run: |
         python -m pytest
 
-    - name: Create build artifact
+    - name: create build artifact
       run: |
         mkdir build
-        cp - app build/
+        cp -r app build/
         zip -r python-app-build.zip build
 
     - name: Upload Build Artifact
